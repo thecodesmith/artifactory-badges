@@ -1,5 +1,6 @@
-package com.thecodesmith.artifactory
+package com.thecodesmith.artifactory.clients
 
+import com.thecodesmith.artifactory.config.ArtifactoryConfig
 import groovy.transform.CompileStatic
 import groovy.util.logging.Slf4j
 import io.micronaut.http.HttpResponse

@@ -1,4 +1,4 @@
-package com.thecodesmith
+package com.thecodesmith.artifactory
 
 import io.micronaut.runtime.Micronaut
 import groovy.transform.CompileStatic

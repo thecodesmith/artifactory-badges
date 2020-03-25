@@ -1,4 +1,4 @@
-package com.thecodesmith.controller
+package com.thecodesmith.artifactory.controller
 
 import io.micronaut.context.ApplicationContext
 import io.micronaut.http.HttpResponse

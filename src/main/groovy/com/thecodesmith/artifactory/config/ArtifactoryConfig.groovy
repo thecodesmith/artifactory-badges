@@ -1,7 +1,9 @@
-package com.thecodesmith.artifactory
+package com.thecodesmith.artifactory.config
 
+import groovy.transform.CompileStatic
 import io.micronaut.context.annotation.ConfigurationProperties
 
+@CompileStatic
 @ConfigurationProperties('artifactory')
 class ArtifactoryConfig {
 
