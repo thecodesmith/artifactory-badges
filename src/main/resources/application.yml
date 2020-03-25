@@ -1,11 +1,9 @@
 ---
 micronaut:
-    application:
-        name: artifactory-badge-mn
-                
-#Uncomment to set server port
-    server:
-        port: 9940
+  application:
+    name: artifactory-badges
+  server:
+    port: 8080
 
 ---
 shields:
@@ -15,23 +13,5 @@ shields:
 artifactory:
   host: localhost
   port: 8081
-  user:
-    name: username
-    token: password
-
----
-#micronaut:
-#  security:
-#    enabled: true
-#    endpoints:
-#      login:
-#        enabled: true
-#      oauth:
-#        enabled: true
-#    token:
-#      jwt:
-#        enabled: true
-#        signatures:
-#          secret:
-#            generator:
-#              secret: "${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}"
+  user: username
+  token: password

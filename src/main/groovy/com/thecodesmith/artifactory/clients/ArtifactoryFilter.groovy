@@ -21,6 +21,6 @@ class ArtifactoryFilter implements HttpClientFilter {
 
     @Override
     Publisher<? extends HttpResponse<?>> doFilter(MutableHttpRequest<?> request, ClientFilterChain chain) {
-        chain.proceed(request.basicAuth(config.user.name, config.user.token))
+        chain.proceed(request.basicAuth(config.user, config.token))
     }
 }
