@@ -45,6 +45,8 @@ shadowJar {
     mergeServiceFiles()
 }
 
+jib.to.image = 'thecodesmith/artifactory-badges'
+
 test.classpath += configurations.developmentOnly
 
 tasks.withType(GroovyCompile) {
