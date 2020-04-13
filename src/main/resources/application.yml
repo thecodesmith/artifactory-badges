@@ -4,6 +4,8 @@ micronaut:
     name: artifactory-badges
   server:
     port: 8080
+  metrics:
+    enabled: true
 
 ---
 endpoints:
