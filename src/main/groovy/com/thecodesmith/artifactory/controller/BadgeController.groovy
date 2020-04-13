@@ -21,11 +21,6 @@ class BadgeController {
     @Inject ArtifactoryClient artifactoryClient
     @Inject BadgeService badgeService
 
-    @Get('/')
-    HttpResponse index() {
-        HttpResponse.ok(status: 200)
-    }
-
     @Get('/{repo}/{groupId}/{artifactId}')
     @Produces('image/svg+xml;charset=utf-8')
     HttpResponse<String> getBadge(String repo, String groupId, String artifactId) {
