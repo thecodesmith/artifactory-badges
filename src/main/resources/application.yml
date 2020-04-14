@@ -4,6 +4,8 @@ micronaut:
     name: artifactory-badges
   server:
     port: 8080
+#    netty:
+#      log-level: info
   metrics:
     enabled: true
 
@@ -11,6 +13,14 @@ micronaut:
 endpoints:
   health:
     enabled: true
+
+---
+logging:
+  level:
+    root: info
+    io.micronaut.http.server: trace
+    io.micronaut.http.client: trace
+    io.micronaut.context: debug
 
 ---
 shields:
