@@ -28,7 +28,6 @@ dependencies {
     implementation 'io.micronaut:micronaut-management'
     implementation 'io.micronaut.configuration:micronaut-micrometer-core'
     implementation 'io.micronaut.configuration:micronaut-micrometer-registry-prometheus'
-    implementation 'io.micronaut.kubernetes:micronaut-kubernetes-discovery-client:1.0.4'
     implementation 'javax.annotation:javax.annotation-api'
 
     runtimeOnly 'ch.qos.logback:logback-classic:1.2.3'
