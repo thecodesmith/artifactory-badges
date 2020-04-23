@@ -26,11 +26,16 @@ class BadgeController {
     HttpResponse<String> getBadge(String repo, String groupId, String artifactId) {
         try {
             log.info "Finding version for '$groupId:$artifactId' in $repo"
+            def artifactoryStart = now()
             def version = artifactoryClient.findVersion(groupId, artifactId, repo) ?: VERSION_NOT_FOUND
+            def artifactoryTime = now() - artifactoryStart
 
             log.info "Latest version for '$repo/$groupId:$artifactId': $version"
+            def shieldsStart = now()
             def badge = badgeService.getVersionBadge(version)
+            def shieldsTime = now() - shieldsStart
 
+            log.info "Request performance: Artifactory: $artifactoryTime, shields.io: $shieldsTime"
             if (!badge) {
                 throw new RuntimeException('Unable to acquire badge from https://shields.io: response is empty')
             }
@@ -41,5 +46,9 @@ class BadgeController {
             log.error('Unable to generate badge', e)
             return HttpResponse.ok(badgeService.getNotFoundBadge())
         }
+    }
+
+    protected static Long now() {
+        new Date().time
     }
 }
