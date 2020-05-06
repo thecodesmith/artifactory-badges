@@ -4,8 +4,6 @@ micronaut:
     name: artifactory-badges
   server:
     port: 8080
-#    netty:
-#      log-level: info
   metrics:
     enabled: true
 
@@ -23,12 +21,12 @@ logging:
     io.micronaut.context: debug
 
 ---
-shields:
-  host: https://img.shields.io
-
----
 artifactory:
   host: localhost
   port: 8081
   user: username
   token: password
+
+---
+shields:
+  host: https://img.shields.io
